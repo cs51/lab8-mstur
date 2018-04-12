@@ -131,7 +131,7 @@ unregisters the listener with that id from the event if there is
 one. If there is no listener with that id, do nothing.
 ......................................................................*)
 
-  let rec remove_listener (evt : 'a event) (i : id) : unit =
+  let remove_listener (evt : 'a event) (i : id) : unit =
     evt := List.filter (fun wait -> wait.id <> i) !evt ;;
 
 (*......................................................................
